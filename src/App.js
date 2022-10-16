@@ -11,6 +11,7 @@ function App() {
       <Sidebar />
 
       {/* Feed */}
+      <Feed />
 
       {/* Widgets */}
     </div>
