@@ -17,6 +17,8 @@ function Widgets() {
         <TwitterTweetEmbed tweetId={"1580447864937156610"} />
 
         <TwitterTimelineEmbed sourceType="profile" screenName="FallGuysJP" options={{ height: 400 }} />
+
+        <TwitterShareButton url={"https://www.fallguys.com/ja"} options={{ text: "#FullGuys is awesome", via: "naoto_its" }} />
       </div>
     </div>
   );
