@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./Widgets.css";
 
 function Widgets() {
-  return (
-    <div>Widgets</div>
-  )
+  return <div className="widgets">Widgets</div>;
 }
 
-export default Widgets
+export default Widgets;
