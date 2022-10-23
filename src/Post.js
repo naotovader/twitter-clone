@@ -1,7 +1,7 @@
 import { Avatar } from "@mui/material";
 import React from "react";
 import "./Post.css";
-import picAvatar from "./pic/picture_avatar.jpg";
+// import picAvatar from "./pic/picture_avatar.jpg";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import RepeatIcon from "@mui/icons-material/Repeat";
@@ -12,23 +12,23 @@ function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src={picAvatar}></Avatar>
+        <Avatar src={avatar}></Avatar>
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              john Doe{" "}
+              {displayName}{" "}
               <span className="post_headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @john
+                {verified && <VerifiedUserIcon className="post__badge" />} @{username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>I challenge you to build a Twitter Clone with ReactJS!!</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src={picAvatar} alt="FallGuys" />
+        <img src={image} alt="FallGuys" />
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
